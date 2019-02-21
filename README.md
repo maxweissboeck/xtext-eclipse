@@ -21,4 +21,4 @@ see [xtext/CONTRIBUTING.md](https://github.com/eclipse/xtext/blob/master/CONTRIB
 
 ## Continuous Integration
 
-This project is built by the [xtext-eclipse multi-branch job on Jenkins](http://services.typefox.io/open-source/jenkins/job/xtext-eclipse/).
+This project is built by the [xtext-eclipse multi-branch job on Jenkins](http://ci.eclipse.org/xtext/xtext-eclipse/).
