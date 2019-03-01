@@ -22,6 +22,18 @@
 		<JENKINS_URL>https://services.typefox.io/open-source/jenkins</JENKINS_URL>
 	</properties>
 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.eclipse.xtext</groupId>
+				<artifactId>xtext-dev-bom</artifactId>
+				<version>${project.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 	<profiles>
 		<!--
 			dont forget to adapt
@@ -60,11 +72,17 @@
 		</profile>
 		<profile>
 			<id>oxygen</id>
+			<properties>
+				<target-platform-classifier>org.eclipse.xtext.target-oxygen</target-platform-classifier>
+			</properties>
+		</profile>
+		<profile>
+			<id>build</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<properties>
-				<target-platform-classifier>org.eclipse.xtext.target-oxygen</target-platform-classifier>
+				<target-platform-classifier>org.eclipse.xtext.target-build</target-platform-classifier>
 			</properties>
 		</profile>
 	</profiles>

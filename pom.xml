@@ -10,6 +10,7 @@
 	</parent>
 
 	<groupId>org.eclipse.xtext</groupId>
+	<!-- TODO would like to rename to xtext-eclipse ... but will that break backward compatibility? -->
 	<artifactId>org.eclipse.xtext.root</artifactId>
 	<packaging>pom</packaging>
 	<version>2.18.0-SNAPSHOT</version>
