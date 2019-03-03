@@ -30,6 +30,8 @@ import org.eclipse.ui.ide.IDE;
 import org.eclipse.ui.views.markers.WorkbenchMarkerResolution;
 import org.eclipse.xtext.junit4.internal.InternalBuilderTest;
 import org.eclipse.xtext.resource.XtextResource;
+import org.eclipse.xtext.testing.InjectWith;
+import org.eclipse.xtext.testing.XtextRunner;
 import org.eclipse.xtext.ui.MarkerTypes;
 import org.eclipse.xtext.ui.XtextProjectHelper;
 import org.eclipse.xtext.ui.editor.XtextEditor;
@@ -53,6 +55,7 @@ import org.eclipse.xtext.xtext.ui.Activator;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import com.google.common.collect.Lists;
 import com.google.inject.Injector;
@@ -62,6 +65,8 @@ import com.google.inject.Injector;
  * @author Arne Deutsch - New test cases for fixAddAction and some refactoring
  */
 @SuppressWarnings("restriction")
+@RunWith(XtextRunner.class)
+@InjectWith(XtextGrammarQuickfixTest.InjectorProvider.class)
 public class XtextGrammarQuickfixProviderTest extends AbstractQuickfixTest {
 
 	private static final String PROJECT_NAME = "org.eclipse.xtext.ui.editor.quickfix";

@@ -11,6 +11,8 @@ package org.eclipse.xtext.xtext.ui;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.osgi.framework.BundleContext;
 
+import com.google.inject.Injector;
+
 /**
  * @author Dennis Hübner - Initial contribution and API
  */
@@ -61,6 +63,15 @@ public class Activator extends org.eclipse.xtext.xtext.ui.internal.Activator {
 	 */
 	public static ImageDescriptor getImageDescriptor(String path) {
 		return imageDescriptorFromPlugin(PLUGIN_ID, path);
+	}
+	
+	/**
+	 * TODO: remove this workaround as soon as a clear solution is
+	 * provided to make the UiInjectorProvider registry aware.
+	 */
+	@Override
+	public Injector createInjector(String language) {
+		return super.createInjector(language);
 	}
 
 }

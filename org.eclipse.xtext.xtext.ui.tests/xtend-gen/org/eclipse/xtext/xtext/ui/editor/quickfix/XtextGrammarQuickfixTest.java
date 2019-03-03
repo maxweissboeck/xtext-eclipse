@@ -28,7 +28,7 @@ public class XtextGrammarQuickfixTest extends AbstractQuickfixTest {
   public static class InjectorProvider implements IInjectorProvider {
     @Override
     public Injector getInjector() {
-      return Activator.getDefault().getInjector(Activator.ORG_ECLIPSE_XTEXT_XTEXT);
+      return Activator.getDefault().createInjector(Activator.ORG_ECLIPSE_XTEXT_XTEXT);
     }
   }
   
